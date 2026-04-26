@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Biblioteca</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Biblioteca</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>📚 Mi Biblioteca</h1>
-  <p>🎬 Videos + 🎧 Música</p>
+  <h1>📚 TITULO TITULO</h1>
 </header>
 
-<section class="grid">
+<div class="container">
 
-  <!-- 🎧 SPOTIFY -->
-  <div class="card">
-    <h2>🎧 Playlist</h2>
-    <iframe style="border-radius:12px"
+  <!-- 📂 LISTA IZQUIERDA -->
+  <aside class="sidebar">
+    <h3>📁 Videos</h3>
+
+    <button onclick="playVideo('videos/cap1.mp4','Capítulo 1')">▶ Capítulo 1</button>
+    <button onclick="playVideo('videos/cap2.mp4','Capítulo 2')">▶ Capítulo 2</button>
+
+    <h3>🎧 Música</h3>
+    <iframe
       src="https://open.spotify.com/embed/playlist/TU_ID"
-      width="100%" height="352"
+      width="100%" height="152"
       frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      allow="autoplay; clipboard-write; encrypted-media">
     </iframe>
-  </div>
+  </aside>
 
-  <!-- 🎬 VIDEO 1 -->
-  <div class="card">
-    <h2>🎬 Capítulo 1</h2>
-    <video controls>
-      <source src="videos/cap1.mp4" type="video/mp4">
+  <!-- 🎬 REPRODUCTOR GRANDE -->
+  <main class="player">
+    <h2 id="title">Selecciona algo</h2>
+
+    <video id="videoPlayer" controls>
+      <source src="" type="video/mp4">
     </video>
-  </div>
+  </main>
 
-  <!-- 🎬 VIDEO 2 -->
-  <div class="card">
-    <h2>🎬 Capítulo 2</h2>
-    <video controls>
-      <source src="videos/cap2.mp4" type="video/mp4">
-    </video>
-  </div>
+</div>
 
-</section>
+<script>
+function playVideo(src, title) {
+  document.getElementById("videoPlayer").src = src;
+  document.getElementById("title").innerText = title;
+}
+</script>
 
 </body>
 </html>
