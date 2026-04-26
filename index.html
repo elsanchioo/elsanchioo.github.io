@@ -2,38 +2,45 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>File Library</title>
+<title>Multimedia</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  📁 Mi Administrador de Archivos Multimedia
+  Multimedia
 </header>
 
-<div class="layout">
+<div class="container">
 
-  <!-- 🧭 PANEL IZQUIERDO (CARPETAS) -->
-  <aside class="folders">
-    <h3>📂 Carpetas</h3>
+  <!-- 🧭 EXPLORADOR IZQUIERDO -->
+  <aside class="explorer">
 
-    <button onclick="loadFolder('videos')">🎬 Videos</button>
-    <button onclick="loadFolder('musica')">🎧 Música</button>
+    <div class="section-title">📁 Archivos</div>
+
+    <div class="item" onclick="openMedia('videos/cap1.mp4','Capítulo 1')">
+      🎬 Capítulo 1
+    </div>
+
+    <div class="item" onclick="openMedia('videos/cap2.mp4','Capítulo 2')">
+      🎬 Capítulo 2
+    </div>
+
+    <div class="item" onclick="openMedia('music/song1.mp3','Canción 1')">
+      🎧 Canción 1
+    </div>
+
   </aside>
 
-  <!-- 📄 LISTA CENTRAL -->
-  <section class="files">
-    <h3>📄 Archivos</h3>
-    <div id="fileList"></div>
-  </section>
+  <!-- 🎬 REPRODUCTOR DERECHO -->
+  <main class="viewer">
 
-  <!-- 🎬 PREVIEW DERECHO -->
-  <section class="preview">
-    <h3 id="title">Nada seleccionado</h3>
+    <h2 id="title">Selecciona un archivo</h2>
 
     <video id="player" controls></video>
-  </section>
+
+  </main>
 
 </div>
 
