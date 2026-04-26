@@ -1,68 +1,153 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #0e0e0e;
+  background: #0f0f0f;
   color: white;
-}
-
-header {
-  padding: 10px;
-  background: #1a1a1a;
-  text-align: center;
-  font-weight: bold;
-}
-
-.layout {
+  height: 100vh;
   display: flex;
-  height: 90vh;
+  flex-direction: column;
 }
 
-/* 🧭 IZQUIERDA */
-.folders {
-  width: 18%;
-  background: #151515;
-  padding: 10px;
+/* 🧠 TOP BAR */
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: bold;
+  background: #181818;
+  border-bottom: 1px solid #2a2a2a;
 }
 
-.folders button {
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  background: #2a2a2a;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* 📄 CENTRO */
-.files {
-  width: 32%;
-  background: #1c1c1c;
-  padding: 10px;
-  overflow-y: auto;
-}
-
-.file {
-  padding: 10px;
-  margin: 5px 0;
-  background: #2a2a2a;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.file:hover {
-  background: #3a3a3a;
-}
-
-/* 🎬 DERECHA */
-.preview {
+/* 📐 MAIN LAYOUT */
+.container {
   flex: 1;
-  padding: 10px;
-  background: #111;
+  display: flex;
+  overflow: hidden;
 }
 
+/* 🧭 EXPLORER IZQUIERDO */
+.explorer {
+  width: 260px;
+  background: #141414;
+  border-right: 1px solid #2a2a2a;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.section-title {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.item {
+  padding: 10px;
+  margin-bottom: 6px;
+  background: #1f1f1f;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #2c2c2c;
+}
+
+/* 🎬 VIEWER DERECHO */
+.viewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.viewer h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* 📺 VIDEO RESPONSIVO */
 video {
   width: 100%;
-  margin-top: 10px;
+  height: calc(100vh - 100px);
+  max-height: 100%;
+  background: black;
+  border-radius: 10px;
+}body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🧠 TOP BAR */
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: bold;
+  background: #181818;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* 📐 MAIN LAYOUT */
+.container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* 🧭 EXPLORER IZQUIERDO */
+.explorer {
+  width: 260px;
+  background: #141414;
+  border-right: 1px solid #2a2a2a;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.section-title {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.item {
+  padding: 10px;
+  margin-bottom: 6px;
+  background: #1f1f1f;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #2c2c2c;
+}
+
+/* 🎬 VIEWER DERECHO */
+.viewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.viewer h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* 📺 VIDEO RESPONSIVO */
+video {
+  width: 100%;
+  height: calc(100vh - 100px);
+  max-height: 100%;
+  background: black;
   border-radius: 10px;
 }
